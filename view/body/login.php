@@ -12,14 +12,14 @@
     			<label for="authentication">Auth</label>
 				<div class="field">
 				  <div class="ui radio checkbox">
-					<input type="radio" name="authentication" value="ad" checked="checked" >
+					<input type="radio" name="authentication" value="ad">
 					<label>ad</label>
 				  </div>
 				</div>
 				<div class="field">
 				  <div class="ui radio checkbox">
-					<input type="radio" name="authentication" value="mail" >
-					<label>mail</label>
+					<input type="radio" name="authentication" value="local" checked="checked">
+					<label>local</label>
 				  </div>
 				</div>
 			</div>		
@@ -45,8 +45,8 @@
 		 </div>
 		</form>
 		<div class="ui message">
-			SDC-ISS System
+			NICS-TIP System
 		 </div>
 	  </div>
 	</div>
-	<?php unset($_SESSION["error"]); ?>
+	hhashedpasswordhashedpasswordashedpassword<?php unset($_SESSION["error"]); ?>

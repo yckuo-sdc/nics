@@ -18,6 +18,7 @@
 							    <a href="https://mxtoolbox.com/DNSLookup.aspx" class="item" target="_blank">Online DNS Query</a>
 							    <a href="https://www.ssllabs.com/ssltest" class="item" target="_blank">Online SSL Test</a>
 							    <a href="https://www.abuseipdb.com" class="item" target="_blank">Online AbuseIPDB</a>
+							    <a href="https://www.shodan.io" class="item" target="_blank">Shodan Search Engine</a>
 							</div>
 					    </div>
 						<div class="column">
@@ -25,13 +26,8 @@
 							    <div class="item">
 								    <div class="ui medium header">中心相關系統</div>
 							    </div>
-							    <a href="https://vision.tainan.gov.tw" class="item" target="_blank">推動友善資訊服務平台</a>
-							    <a href="https://tndev.tainan.gov.tw" class="item" target="_blank">網管設備管理系統</a>
-							    <a href="https://sdc-mrbs.tainan.gov.tw" class="item" target="_blank">SDC會議室預約系統</a>
-							    <a href="https://sdc-mrbs.tainan.gov.tw/callcenter/login.php" class="item" target="_blank">Call Center預約</a>
-							    <a href="https://tccy-vsms.chtsecurity.com/cgi-bin/login.pl" class="item" target="_blank">弱點掃描管理平台</a>
-							    <a href="https://webad.tainan.gov.tw:4343" class="item" target="_blank">WebAD</a>
-							    <a href="https://eisms.tainan.gov.tw" class="item" target="_blank">eISMS</a>
+							    <a href="http://10.3.40.21:5601/app/kibana#/discover?_g=()" class="item" target="_blank">Elastic Kibana</a>
+							    <a href="https://advantage.mandiant.com" class="item" target="_blank">Mandiant</a>
 						    </div>
 						</div>
 						<div class="column">

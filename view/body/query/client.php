@@ -21,6 +21,7 @@
                                     <label>欄位</label>
                                     <select name="keyword" id="keyword" class="ui fluid dropdown" required>
                                     <option value="ClientName"  selected>電腦名稱</option>
+                                    <option value="type"  selected>設備類型</option>
                                     <option value="IP" >內部IP</option>
                                     <option value="UserName" >使用者帳號</option>
                                     <option value="OrgName" >單位名稱</option>

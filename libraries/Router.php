@@ -28,7 +28,8 @@ class Router {
     public function createBreadcrumbs($separator = ' &raquo; ', $home = 'Home'){
 
         // This will build our "base URL" ... Also accounts for HTTPS :)
-        $base = ($_SERVER['HTTPS'] ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+        $base = ($_SERVER['REQUEST_SCHEME'] ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+
 
         // Initialize a temporary array with our breadcrumbs. (starting with our home page, which I'm assuming will be the base URL)
         $breadcrumbs = array("<a href=\"$base\">$home</a>");

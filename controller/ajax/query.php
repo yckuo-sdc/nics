@@ -345,7 +345,7 @@ if ($ap=='csv') {
 			<?php case "drip": ?>
                 <?php
                 $state_icon_map = array( 
-                    'type' => array('computer' => 'desktop icon', 'device' => 'hdd icon'),
+                    'type' => array('server' => 'server icon', 'computer' => 'desktop icon', 'device' => 'hdd icon'),
                     'ad' => array('outline circle icon', 'yellow circle icon'),
                     'gcb' => array('outline circle icon', 'green circle icon'),
                     'wsus' => array('outline circle icon', 'red circle icon'),

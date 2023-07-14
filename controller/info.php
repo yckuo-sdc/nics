@@ -1,4 +1,3 @@
-<!--info-->
 <?php 
 if(!$userValidator->isLogin()){
 	header("Location: /logout"); 

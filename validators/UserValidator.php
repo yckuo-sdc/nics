@@ -63,14 +63,14 @@ class UserValidator {
      * 驗證帳號密碼是否正確可登入
      */
     public function loginVerification($username, $password){
-        $result = Database::get()->execute('SELECT * FROM members WHERE active = "Yes" AND username = :username', array(':username' => $username));
-        if(isset($result[0]['memberID']) and !empty($result[0]['memberID'])) {
+        $result = Database::get()->execute('SELECT * FROM users WHERE SSOID  = :SSOID', array(':SSOID' => $username));
+        if(isset($result[0]['SSOID']) and !empty($result[0]['SSOID'])) {
             $passwordObject = new Password();
-            if($passwordObject->password_verify($password,$result[0]['password'])){
+            if($passwordObject->password_verify($password,$result[0]['Password'])){
                 return true;
             }
         }
-        $this->error[] = 'Wrong username or password or your account has not been activated.';
+        $this->error[] = 'Wrong username or password.';
         return false;
     }
 

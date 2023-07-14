@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-			<p>COPYRIGHT &copy; TainanGov SDC. All rights reserved. Design by <a href="#">yckuo</a>.</p>
+			<p>COPYRIGHT &copy; NICS-TA. All rights reserved. Design by <a href="#">yckuo</a>.</p>
 		<footer>
 		</div>
 	</div>

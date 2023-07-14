@@ -15,7 +15,7 @@ $automatic_apis = $db->execute($sql);
 
 $automatic_apis_num = count($automatic_apis); 
 $today_updated_array = array_column($automatic_apis, "today_updated");
-$today_updated_num = array_count_values($today_updated_array)[1];
+$today_updated_num = empty(array_count_values($today_updated_array)[1]) ? 0 : array_count_values($today_updated_array)[1];
 $label_color = ($automatic_apis_num == $today_updated_num) ? "grey" : "red";
 
 $sql = "SELECT a.id, a.class, a.name, a.data_type, a.update_frequency, b.url, b.data_number, b.updated_at

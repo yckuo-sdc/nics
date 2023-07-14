@@ -74,9 +74,10 @@ if($validated_data === false) {
 				exit();	
 			}
             break;
-		case "mail":
-			$pop = POP3::popBeforeSmtp('pop3.tainan.gov.tw', 110, 30, $username, $password, 1);
-			if($pop && isset($user[0]['SSOID']) && !empty($user[0]['SSOID'])){
+		case "local":
+			//$pop = POP3::popBeforeSmtp('pop3.tainan.gov.tw', 110, 30, $username, $password, 1);
+            $local = $userValidator->loginVerification($username, $password);
+			if($local && isset($user[0]['SSOID']) && !empty($user[0]['SSOID'])){
                 session_regenerate_id(); //Prevent Session Fixation with changing session id
 
                 $displayname= $user[0]['DisplayName'];

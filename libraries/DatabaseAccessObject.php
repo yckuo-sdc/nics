@@ -249,7 +249,7 @@ class DatabaseAccessObject {
 		$condition = "";
 
 		foreach($columns as $col) {
-			$condition = $condition . " " . $col['column_name'] . " LIKE ? OR";
+			$condition = $condition . " " . $col['COLUMN_NAME'] . " LIKE ? OR";
 			$data[] = "%".$key."%";
 		}
 

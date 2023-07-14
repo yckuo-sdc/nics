@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=big5" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>臺南市政府 智慧發展中心</title>
+        <title>NICS 威脅情資平台</title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <link rel="shortcut icon" href="/images/logo.ico" />

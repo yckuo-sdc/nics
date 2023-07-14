@@ -29,6 +29,13 @@ ClientName REGEXP '[^ -~]' OR
 GroupName LIKE 'TAINAN' ";
 $db->execute($sql);
 
+//update the column 'type' with 'DetectorName'
+$sql = "UPDATE drip_client_list
+SET type = 'server'
+WHERE
+DetectorName LIKE '%Server%' ";
+$db->execute($sql);
+
 //update the column 'ad' from table 'ad_computer_list'
 $sql = "UPDATE drip_client_list AS A
 JOIN ad_computers AS B 
