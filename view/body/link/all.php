@@ -19,6 +19,7 @@
 							    <a href="https://www.ssllabs.com/ssltest" class="item" target="_blank">Online SSL Test</a>
 							    <a href="https://www.abuseipdb.com" class="item" target="_blank">Online AbuseIPDB</a>
 							    <a href="https://www.shodan.io" class="item" target="_blank">Shodan Search Engine</a>
+							    <a href="https://www.shodan.io/search/filters" class="item" target="_blank">Shodan Filter Reference</a>
 							</div>
 					    </div>
 						<div class="column">
