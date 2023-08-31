@@ -14,6 +14,7 @@ config/
 upload/
 vendor/
 node_modules/
+hackable/
 
 # ignore all sub files
 *.inc.php
@@ -36,5 +37,3 @@ demo.*
 
 # igonre sql file
 *.sql
-
-

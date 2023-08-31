@@ -27,7 +27,11 @@
 							    <div class="item">
 								    <div class="ui medium header">中心相關系統</div>
 							    </div>
-							    <a href="http://10.3.40.21:5601/app/kibana#/discover?_g=()" class="item" target="_blank">Elastic Kibana</a>
+							    <a href="http://10.3.40.21:5601/app/kibana#/discover?_g=()" class="item" target="_blank">Kibana(raw data)</a>
+							    <a href="http://10.18.1.66:5601/app/kibana#/discover?_g=()" class="item" target="_blank">Kibana(enriched data)</a>
+							    <a href="http://10.3.40.17:8000" class="item" target="_blank">IP2Georg 17</a>
+							    <a href="http://10.3.40.19:8000" class="item" target="_blank">IP2Georg 19</a>
+							    <a href="https://notice.icst.org.tw" class="item" target="_blank">Notice+</a>
 							    <a href="https://advantage.mandiant.com" class="item" target="_blank">Mandiant</a>
 						    </div>
 						</div>
@@ -44,10 +48,26 @@
 							    <a href="https://isg.nccst.nat.gov.tw" class="item" target="_blank">資安治理成熟度評估系統(ISG)</a>
 						    </div>
 						</div>
+						<div class="column">
+							<div class="ui list">
+							    <div class="item">
+								    <div class="ui medium header">My Services</div>
+							    </div>
+							    <a href="http://localhost:9200/" class="item" target="_blank">Docker Elasticsearch</a>
+							    <a href="http://localhost:5601/" class="item" target="_blank">Docker Kibana</a>
+							</div>
+					    </div>
+					    <div class="column">
+                            <div class="ui list">
+                                <div class="item">
+                                    <div class="ui medium header">Code Sharing</div>
+                                </div>
+                                <a href="https://github.com/yckuo-sdc/python-cs-tools" class="item" target="_blank">python-cs-tools</a>
+                                <a href="http://10.3.40.16:8888" class="item" target="_blank">Ray Jupyter 16</a>
+                                <a href="http://10.3.40.17:8888" class="item" target="_blank">Ray Jupyter 17</a>
+                            </div>
+                        </div>
 					  </div>
-					 <!-- <div class="ui vertical divider">
-						and
-					  </div>-->
 					</div>
 				</div> <!--end of .post_cell -->
 			</div> <!--end of .post --> 
