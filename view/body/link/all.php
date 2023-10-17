@@ -20,6 +20,8 @@
 							    <a href="https://www.abuseipdb.com" class="item" target="_blank">Online AbuseIPDB</a>
 							    <a href="https://www.shodan.io" class="item" target="_blank">Shodan Search Engine</a>
 							    <a href="https://www.shodan.io/search/filters" class="item" target="_blank">Shodan Filter Reference</a>
+							    <a href="https://www.shodan.io/search/examples" class="item" target="_blank">Search Query Examples</a>
+
 							</div>
 					    </div>
 						<div class="column">
@@ -27,11 +29,13 @@
 							    <div class="item">
 								    <div class="ui medium header">中心相關系統</div>
 							    </div>
-							    <a href="http://10.3.40.21:5601/app/kibana#/discover?_g=()" class="item" target="_blank">Kibana(raw data)</a>
-							    <a href="http://10.18.1.66:5601/app/kibana#/discover?_g=()" class="item" target="_blank">Kibana(enriched data)</a>
+							    <a href="http://10.3.40.21:5601/app/kibana#/discover?_g=()" class="item" target="_blank">Kibana(ddi raw data)</a>
+							    <a href="http://10.18.1.66:5601/app/kibana#/discover?_g=()" class="item" target="_blank">Kibana(ddi enrich data)</a>
 							    <a href="http://10.3.40.17:8000" class="item" target="_blank">IP2Georg 17</a>
 							    <a href="http://10.3.40.19:8000" class="item" target="_blank">IP2Georg 19</a>
 							    <a href="https://notice.icst.org.tw" class="item" target="_blank">Notice+</a>
+							    <a href="http://10.3.198.13/gsnsearch" class="item" target="_blank">GSN 流量搜尋</a>
+
 							    <a href="https://advantage.mandiant.com" class="item" target="_blank">Mandiant</a>
 						    </div>
 						</div>

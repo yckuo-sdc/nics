@@ -206,6 +206,10 @@
     border-color:#117692;
 }
 
+.post .ui.label {
+    margin: 0.14em 0.14285714em;
+}
+
 .post p.header{
     color: #4183C4;
     font-weight: bold;
