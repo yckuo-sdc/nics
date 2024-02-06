@@ -27,5 +27,10 @@
 		"files": [
 			"helpers/functions.php"
 		]
-	}
+	},
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
 }

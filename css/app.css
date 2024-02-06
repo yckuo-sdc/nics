@@ -402,6 +402,26 @@ div.header a{
     color: #767676;
 }
 
+.ui.cards .detail{
+	display:none;
+	word-break: break-all;
+    white-space:normal;
+	overflow-x: hidden;
+	background-color: #efefef;
+	padding: 3vw;
+	border-radius: 1vw;
+}
+
+.ui.cards .detail.show{
+	display:block;
+	word-break: break-word;
+    white-space:normal;
+    overflow-x: hidden;
+	background-color: #efefef;
+	padding: 1vmin;
+	border-radius: 1vmin;
+	/*font-size: 2vmin;*/
+}
 
 .ldap_tree_content .foldable.item{
 	display:none !important;
@@ -449,6 +469,8 @@ div.header a{
 	padding: 3px;
 	box-sizing: border-box;
 }
+
+
 
 /*media only screen and (min-width: 400px) and (max-width: 700px) and (orientation: portrait){*/
 @media screen and (orientation: portrait),screen and (min-width: 350px) and (max-width: 700px){

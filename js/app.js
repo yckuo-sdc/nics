@@ -361,6 +361,25 @@ $(document).ready(function(){
 		vul_query_ajax(parameter);
 	});
 
+	$('.post.intelligence form').on('submit', function(e){
+        var parameter = {type: 'intelligence'};
+		do_intelligence_ajax(parameter);
+        e.preventDefault();
+	});
+
+	// collapse action
+	$('.post.intelligence .record_content').on('click', 'div.button', function() {
+		let icon = $(this).parent().find('i.icon');
+		let detail = $(this).parent().find('.detail');
+		if (detail.hasClass('show')) {
+			icon.removeClass('minus').addClass('add');
+			detail.removeClass('show');
+		} else {
+			icon.removeClass('add').addClass('minus');
+			detail.addClass('show');
+		}
+	});
+
 	/*Bind fetch button*/
 
 	// Google Sheets of security events
@@ -1054,6 +1073,27 @@ function ips_query_pagination_ajax(data_array) {
         ajax_check_user_logged_out(jqXHR);
     });
  }*/
+
+function do_intelligence_ajax(parameter) {
+    var type = parameter.type;
+	var selector = ".post." + type + " ";
+
+    $.ajax({
+         url: '/ajax/do_intelligence/',
+         cache: false,
+         dataType:'html',
+         type:'GET',
+		 data: $(selector + 'form').serializeArray(),
+    })
+    .done(function(data) {
+        $(selector + '.record_content').html(data);
+        $('.ui.accordion').accordion('refresh');
+    })
+    .fail(function(jqXHR) {
+        ajax_check_user_logged_out(jqXHR);
+    });
+
+}
 
 function fetch_data_ajax(type) {
     var fetch_url = "/ajax/fetch_" + type + "/";

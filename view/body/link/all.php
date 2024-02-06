@@ -12,7 +12,8 @@
 							    <div class="item">
 								    <div class="ui medium header">駭客常用工具</div>
 							    </div>
-							    <a href="https://sdc-iss.tainan.gov.tw:4000" class="item" target="_blank">OpenVas(開源掃描工具)</a>
+							    <a href="https://toolbox.googleapps.com/apps/main/" class="item" target="_blank">Google Admin Toolbox</a>
+
 							    <a href="https://hackertarget.com" class="item" target="_blank">Hacker 線上工具</a>
 							    <a href="https://hackertarget.com/reverse-ip-lookup" class="item" target="_blank">Reverse IP Lookup</a>
 							    <a href="https://mxtoolbox.com/DNSLookup.aspx" class="item" target="_blank">Online DNS Query</a>
@@ -21,6 +22,8 @@
 							    <a href="https://www.shodan.io" class="item" target="_blank">Shodan Search Engine</a>
 							    <a href="https://www.shodan.io/search/filters" class="item" target="_blank">Shodan Filter Reference</a>
 							    <a href="https://www.shodan.io/search/examples" class="item" target="_blank">Search Query Examples</a>
+							    <a href="https://viz.greynoise.io/query" class="item" target="_blank">GreyNoise(探測行為搜尋)</a>
+
 
 							</div>
 					    </div>
@@ -31,6 +34,7 @@
 							    </div>
 							    <a href="http://10.3.40.21:5601/app/kibana#/discover?_g=()" class="item" target="_blank">Kibana(ddi raw data)</a>
 							    <a href="http://10.18.1.66:5601/app/kibana#/discover?_g=()" class="item" target="_blank">Kibana(ddi enrich data)</a>
+							    <a href="http://10.3.40.16:5601/app/kibana#/home" class="item" target="_blank">Kibana(caras)</a>
 							    <a href="http://10.3.40.17:8000" class="item" target="_blank">IP2Georg 17</a>
 							    <a href="http://10.3.40.19:8000" class="item" target="_blank">IP2Georg 19</a>
 							    <a href="https://notice.icst.org.tw" class="item" target="_blank">Notice+</a>
@@ -69,6 +73,15 @@
                                 <a href="https://github.com/yckuo-sdc/python-cs-tools" class="item" target="_blank">python-cs-tools</a>
                                 <a href="http://10.3.40.16:8888" class="item" target="_blank">Ray Jupyter 16</a>
                                 <a href="http://10.3.40.17:8888" class="item" target="_blank">Ray Jupyter 17</a>
+                            </div>
+                        </div>
+					    <div class="column">
+                            <div class="ui list">
+                                <div class="item">
+                                    <div class="ui medium header">Http Test Tool</div>
+                                </div>
+                                <a href="https://urlscan.io/" class="item" target="_blank">urlscan</a>
+                                <a href="https://httpstatus.io/" class="item" target="_blank">httpstatus</a>
                             </div>
                         </div>
 					  </div>
