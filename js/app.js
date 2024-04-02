@@ -1078,6 +1078,7 @@ function do_intelligence_ajax(parameter) {
     var type = parameter.type;
 	var selector = ".post." + type + " ";
 
+	$(selector + '.ui.inline.loader').addClass('active');
     $.ajax({
          url: '/ajax/do_intelligence/',
          cache: false,
@@ -1086,6 +1087,7 @@ function do_intelligence_ajax(parameter) {
 		 data: $(selector + 'form').serializeArray(),
     })
     .done(function(data) {
+        $(selector + '.ui.inline.loader').removeClass('active');
         $(selector + '.record_content').html(data);
         $('.ui.accordion').accordion('refresh');
     })
