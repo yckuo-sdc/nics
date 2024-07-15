@@ -14,6 +14,10 @@ function format ( d ) {
             '<td>Note:</td>' + 
             '<td>' + d.notes + '</td>'+
         '</tr>' +
+        '<tr>' + 
+            '<td>PoC:</td>' + 
+            '<td>' + d.poc + '</td>'+
+        '</tr>' +
     '</table>';
 
     return htmlString;
@@ -78,6 +82,30 @@ $(document).ready(function() {
                     return data;
                 }
             },
+            { data: 'known_ransomware_campaign_use',
+				render: function(data, type, row, meta) {
+                    let render_data = data
+                    if (data === "Known") {
+                        render_data = "<div class='ui olive label'>Used</div>";
+                    } else {
+                        render_data = "-";
+                    }
+                    return render_data;
+                }
+            },
+            { data: 'poc',
+				render: function(data, type, row, meta) {
+                    let render_data = data
+                    if (data === "") {
+                        render_data = "-";
+                    } else {
+                        //let decodedString = data.replace(/&quot;/g, '"');
+                        //let jsonObject = JSON.parse(decodedString);
+                        render_data = "<div class='ui orange label'>Existed</div>";
+                    }
+                    return render_data;
+                }
+            },
         ], 
 		columnDefs: [
 			{
@@ -100,7 +128,7 @@ $(document).ready(function() {
         ],
         initComplete: function () {
             // Apply column searching (text inputs)
-            this.api().columns([1, 2, 3, 4, 5, 6, 7]).every( function () {
+            this.api().columns([1, 2, 3, 4, 5, 6, 7, 8, 9]).every( function () {
                 let that = this;
  
                 $( 'input', this.footer() ).on( 'keyup change clear', function () {

@@ -16,6 +16,8 @@
                                 <th>Product</th>
                                 <th>CVSSv3</th>
                                 <th>CWE ID</th>
+                                <th>Ransomware</th>
+                                <th>PoC</th>
                             </tr>
                         </thead>
                         <tfoot>
@@ -28,6 +30,8 @@
                                 <th>Product</th>
                                 <th>CVSSv3</th>
                                 <th>CWE ID</th>
+                                <th>Ransomware</th>
+                                <th>PoC</th>
                             </tr>
                         </tfoot>
                     </table>
