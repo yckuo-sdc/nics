@@ -18,12 +18,11 @@ $(document).ready(function(){
 	c3_chart_enews_ajax(url);
 	c3_chart_ranking_ajax(url);
 	c3_chart_client_ajax(url);
-	c3_chart_network_ajax(url);
 });
 
 function c3_chart_enews_ajax(url){
 	$.ajax({    
-         url: url+'/ajax/chart.php',
+         url: url+'/ajax/chart',
 		 cache: false,
 		 dataType:'json',
 		 type:'GET',
@@ -76,7 +75,7 @@ function c3_chart_enews_ajax(url){
 
 function c3_chart_ranking_ajax(url){
 	$.ajax({
-		url: url+'/ajax/chart.php',
+		url: url+'/ajax/chart',
 		cache: false,
 		dataType:'json',
 		type:'GET',
@@ -260,7 +259,7 @@ function c3_chart_ranking_ajax(url){
 
 function c3_chart_client_ajax(url){
 	$.ajax({
-		 url: url+'/ajax/chart.php',
+		 url: url+'/ajax/chart',
 		 cache: false,
 		 dataType:'json',
 		 type:'GET',
@@ -434,7 +433,7 @@ function c3_chart_client_ajax(url){
 
 function c3_chart_network_ajax(url){
 	$.ajax({
-		 url: url+'/ajax/chart.php',
+		 url: url+'/ajax/chart',
 		 cache: false,
 		 dataType:'html',
 		 type:'GET',
@@ -522,4 +521,3 @@ function c3_chart_network_ajax(url){
 	});
 	return 0;
  }
-

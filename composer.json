@@ -15,7 +15,8 @@
 		"phpmailer/phpmailer": "^6.5",
 		"tamtamchik/simple-flash": "^2.0.0",
         "vlucas/phpdotenv": "^5.2",
-        "phpoffice/phpspreadsheet": "^1.23"
+        "phpoffice/phpspreadsheet": "^1.23",
+        "elasticsearch/elasticsearch": "~7.0"
 	},
 	"autoload": {
 		"classmap": [

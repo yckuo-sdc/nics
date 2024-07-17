@@ -1,12 +1,9 @@
 <?php
-require_once __DIR__ . '/../vendor/autoload.php';
-
 if (empty($_GET['chartID'])) {
 	return 0;
 }
 
 $chartID = $_GET['chartID'];
-$db = Database::get();
 
 switch($chartID){
 	case "enews":
@@ -108,21 +105,68 @@ switch($chartID){
 		echo "</data>";
 		break;
 	case "nics":
+        $data_array = array();
+
         $params = [
             'index' => 'gsn_asset*',
             'body' => [
+                'size' => 0,
                 'aggs' => [
-                    'Service_Type_Count' => [
+                    'ports' => [
                         'terms' => [
-                            'field' => 'Port',
-                            'size' => 100
+                            'field' => 'Product.keyword', // Assuming 'Port' is a keyword field
+                            'size' => 10 // Number of ports to return
                         ]
-                     ]
+                    ]
                 ]
             ]
         ];
+
         $response = $es_client->search($params);
-		$data_array = ['gsnService' => $response];
+        $aggregations = $response['aggregations']['ports']['buckets'];
+
+        $count_array = array();
+
+        foreach ($aggregations as $bucket) {
+            $item = array(
+                'name' => $bucket['key'],
+                'count' => $bucket['doc_count']
+            );
+            $count_array[] = $item;
+        }
+
+
+		$data_array['topProduct'] = $count_array;
+
+        $params = [
+            'index' => 'gsn_asset*',
+            'body' => [
+                'size' => 0,
+                'aggs' => [
+                    'ports' => [
+                        'terms' => [
+                            'field' => 'Port', 
+                            'size' => 10
+                        ]
+                    ]
+                ]
+            ]
+        ];
+
+        $response = $es_client->search($params);
+        $aggregations = $response['aggregations']['ports']['buckets'];
+
+        $count_array = array();
+
+        foreach ($aggregations as $bucket) {
+            $item = array(
+                'name' => $bucket['key'],
+                'count' => $bucket['doc_count']
+            );
+            $count_array[] = $item;
+        }
+
+		$data_array['topPort'] = $count_array;
 		echo json_encode($data_array, JSON_UNESCAPED_UNICODE);
 		break;
 }

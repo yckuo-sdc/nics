@@ -44,7 +44,7 @@
         <script src="/js/app.js"></script>
         <script src='/js/c3chart.js'></script>
         <script src='/js/gchart.js'></script>
-        <script src="/js/datatables_news.js"></script>
+        <script src="/js/datatables/news.js"></script>
 
     </head>
     <body id="example">

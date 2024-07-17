@@ -4,8 +4,8 @@ $(document).ready(function() {
     var tawinaCoords = [37.7749, -122.4194]; // Replace with actual coordinates
     var map = L.map('map') 
     var bounds = [
-        [20.7, 119.5], // Southwest corner
-        [25.3, 122.1]  // Northeast corner
+        [21.8369, 119.5343], // Southwest corner
+        [25.3008, 122.0067]  // Northeast corner
     ];
     map.fitBounds(bounds);
     
@@ -13,12 +13,11 @@ $(document).ready(function() {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    var centralPoint = [23.7, 121.0]; // Approximate central point of Taiwan
-    L.marker(centralPoint).addTo(map).bindPopup("<b>Taiwan</b><br>Central Point").openPopup();
+    L.marker([25.040857, 121.561348]).addTo(map)
+        .bindPopup('<b>國防部</b><br>Taiwan')
+        .openPopup();
 
-
-    var taipeiCoords = [25.0330, 121.5654]; // Coordinates for Taipei
-    var taipeiMarker = L.marker(taipeiCoords).addTo(map);
-    taipeiMarker.bindPopup("<b>Taipei</b><br>Capital of Taiwan").openPopup();
-
+    L.marker([22.922985, 120.289470]).addTo(map)
+        .bindPopup('<b>資安院</b><br>Taiwan')
+        .openPopup();
 });

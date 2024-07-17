@@ -24,6 +24,24 @@
         <link rel="stylesheet" type="text/css" href="/node_modules/semantic/semantic.css">
         <script src="/node_modules/semantic/semantic.js"></script>
 
+        <!-- datatables -->
+        <link rel="stylesheet" type="text/css" href="/node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="/node_modules/datatables.net-buttons/css/buttons.dataTables.min.css">
+        <script src="/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="/node_modules/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+        <script src="/node_modules/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="/node_modules/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="/node_modules/jszip/dist/jszip.min.js"></script>
+
+        <!-- leaflet -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+             integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+             crossorigin=""/>
+        <link rel="stylesheet" href="/css/map.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+             crossorigin=""></script>
+
         <!-- template css-->
         <link href="/css/default.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -32,15 +50,10 @@
         <link href="/css/app.css" rel="stylesheet"/>
 
         <!-- my js-->
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-             integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-             crossorigin=""/>
-        <link rel="stylesheet" href="/css/map.css" />
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-             crossorigin=""></script>
         <script src="/js/map.js"></script>
-
+        <script src="/js/app.js"></script>
+        <script src='/js/c3chart/nics.js'></script>
+        <script src="/js/datatables/asm.js"></script>
     </head>
     <body id="example">
         <div class="ui vertical inverted sidebar menu left" id="toc">
