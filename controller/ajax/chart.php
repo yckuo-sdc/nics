@@ -167,6 +167,37 @@ switch($chartID){
         }
 
 		$data_array['topPort'] = $count_array;
+
+        $params = [
+            'index' => 'gsn_asset*',
+            'body' => [
+                'size' => 0,
+                'aggs' => [
+                    'classes' => [
+                        'terms' => [
+                            'field' => 'Class.keyword', // Assuming 'Port' is a keyword field
+                            'size' => 10 // Number of ports to return
+                        ]
+                    ]
+                ]
+            ]
+        ];
+
+        $response = $es_client->search($params);
+        $aggregations = $response['aggregations']['classes']['buckets'];
+
+        $count_array = array();
+
+        foreach ($aggregations as $bucket) {
+            $item = array(
+                'name' => $bucket['key'],
+                'count' => $bucket['doc_count']
+            );
+            $count_array[] = $item;
+        }
+
+
+		$data_array['classes'] = $count_array;
 		echo json_encode($data_array, JSON_UNESCAPED_UNICODE);
 		break;
 }

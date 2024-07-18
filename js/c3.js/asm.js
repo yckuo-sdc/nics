@@ -27,7 +27,9 @@ function c3_chart_ajax(url){
 		 },success: function(data) {
 			 //console.log(data);
 			var tmp_data, len;
-			var topProductArray = [], topPortArray = [];
+			var topProductArray = [], topPortArray = [], classesArray = [];
+			var classesCountArray = [], classesNameArray = [];
+
 			tmp_data = data.topProduct;
 			len = tmp_data.length;
 			for(var i=0; i<len; i++){
@@ -43,6 +45,18 @@ function c3_chart_ajax(url){
 				var count = tmp_data[i].count;
 				topPortArray.push([name, count]);
 			}
+
+			tmp_data = data.classes;
+			len = tmp_data.length;
+			for(var i=0; i<len; i++){
+				var name = tmp_data[i].name;
+				var count = tmp_data[i].count;
+				classesNameArray.push(name);
+				classesCountArray.push(count);
+			}
+
+            console.log(classesCountArray, classesNameArray);
+			classesCountArray.unshift('organization');
 
 			var chart = c3.generate({
 				bindto: '#top_product_chart',
@@ -104,6 +118,36 @@ function c3_chart_ajax(url){
 				}
 			});
 
+			var chart = c3.generate({
+				bindto: '#classes_chart',
+				data:{ 
+					columns: [classesCountArray],
+					type: 'bar',
+                    colors: {
+                        organization: '#A5673F'
+                    },
+				},axis: {
+					rotated: true,
+					x: {
+						type: 'category',
+						categories: classesNameArray,
+						rotated: true
+					}
+				},bar: {
+					width: {
+						ratio: 0.5 // this makes bar width 50% of length between ticks	
+					}
+				},size:{
+					height: '100%'
+				},grid: {
+					x: {
+						show: true
+					},
+					y: {
+						show: true
+					}
+				}
+			});
 		 }
 	});
 	return 0;

@@ -19,6 +19,7 @@
         <script src="/node_modules/c3js/c3.min.js"></script>
         <script src="/node_modules/jquery-tablesort/jquery.tablesort.min.js"></script>
         <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="/node_modules/chart.js/dist/chart.umd.js"></script>
 
         <!-- semantic ui -->
         <link rel="stylesheet" type="text/css" href="/node_modules/semantic/semantic.css">
@@ -50,10 +51,10 @@
         <link href="/css/app.css" rel="stylesheet"/>
 
         <!-- my js-->
-        <script src="/js/map.js"></script>
         <script src="/js/app.js"></script>
-        <script src='/js/c3chart/nics.js'></script>
+        <script src="/js/leaflet/asm.js"></script>
         <script src="/js/datatables/asm.js"></script>
+        <script src="/js/chart.js/asm.js"></script>
     </head>
     <body id="example">
         <div class="ui vertical inverted sidebar menu left" id="toc">

@@ -13,5 +13,5 @@ $controller_array = array_change_key_case($controller_array, CASE_LOWER);
 if (in_array($subpage.'.php', $controller_array)) {
 	  require 'controller/nics/'.$subpage.'.php';
 } else {
-	  require 'controller/nics/news.php';
+	  require 'controller/nics/asm.php';
 }

@@ -6,5 +6,5 @@ $controller_array = array_change_key_case($controller_array, CASE_LOWER);
 if (in_array($mainpage . '.php', $controller_array)) {
     require 'controller/' . $mainpage . '.php';
 } else {
-    require 'controller/info.php';
+    require 'controller/nics.php';
 }

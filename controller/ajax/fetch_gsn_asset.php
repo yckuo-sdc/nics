@@ -2,7 +2,8 @@
 $params = [
     #'scroll' => '5m', // period to retain the search context
     'index' => 'gsn_asset*',
-    'size' => 1000,
+    'from' => 0,
+    'size' => 5000,
     'body'  => [
         'query' => [
             'match_all' => new stdClass() // Match all query
