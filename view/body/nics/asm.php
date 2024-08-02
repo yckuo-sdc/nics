@@ -62,16 +62,16 @@
                         <div class="four wide computer eight wide tablet sixteen wide mobile column">
                             <div class="ui fluid card">
                                 <div class="content">
-                                    <div class="ui right floated header blue">
+                                    <div class="ui right floated brown header">
                                         <i class="server icon"></i>
                                     </div>
                                     <div class="header">
-                                        <div class="ui blue header">
+                                        <div class="ui brown header">
                                             供應商漏洞
                                         </div>
                                     </div>
                                     <div class="description">
-                                        <div class="ui small blue statistic">
+                                        <div class="ui small brown statistic">
                                             <div class="value">3332</div>
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@
                                 <div class="extra content">
                                     <a href="#">				
                                         <div class="ui two buttons">
-                                            <div class="ui blue button">More Info</div>
+                                            <div class="ui brown button">More Info</div>
                                         </div>
                                     </a>
                                 </div>
@@ -158,11 +158,11 @@
                         <div class="eight wide computer eight wide tablet sixteen wide mobile column">
                             <div class="ui fluid card">
                                 <div class="content">
-                                    <div class="ui right floated header brown">
+                                    <div class="ui right floated blue header">
                                         <i class="building icon"></i>
                                     </div>
                                     <div class="header">
-                                        <div class="ui header brown">
+                                        <div class="ui blue header">
                                             Class Rank
                                         </div>
                                     </div>
@@ -171,7 +171,7 @@
                                  <div class="extra content">
                                     <a href="#assets">				
                                         <div class="ui two buttons">
-                                            <div class="ui brown button">More Info</div>
+                                            <div class="ui blue button">More Info</div>
                                         </div>
                                     </a>		    
                                  </div>

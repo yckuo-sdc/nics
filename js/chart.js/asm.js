@@ -59,7 +59,7 @@ function chartjs_ajax() {
                         datasets: [
                             {
                                 label: 'Organization',
-                                data: data.classes.map(row => row.count)
+                                data: data.classes.map(row => row.count),
                             }
                         ]
                     },

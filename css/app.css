@@ -689,6 +689,9 @@ div.header a{
 	    -ms-overflow-style: none;
 }
 
+.ui.menu.fixed {
+    z-index: 500;
+}
 
 @media only screen and (min-width: 1145px){
 	#example .fixed.main.menu {

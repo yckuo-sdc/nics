@@ -9,7 +9,7 @@
 						<div class="field">
 							<label>notice id</label>
 							<div class="ui input">
-								<input type="text" name="notice_id" value="NICS-INT-2023-0001521" placeholder="NICS-INT-2023-0001521" required>
+								<input type="text" name="notice_id" value="" placeholder="please input notice id" required>
 							</div>
 						</div>
 						<div class="field">
