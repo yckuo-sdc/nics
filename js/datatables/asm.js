@@ -8,10 +8,10 @@ function encodeHTML(str) {
 function format ( d ) {
     // `d` is the original data object for the row
     let htmlString = '<table cellpadding="5" cellspacing="0" border="0">' +
-        '<tr>' + 
-            '<td>Data:</td>' + 
-            '<td>' + encodeHTML(d.Data) + '</td>'+
-        '</tr>' +
+        "<tr style='overflow-wrap: anywhere'>" +
+            "<td>Data:</td>" +
+            "<td>" + encodeHTML(d.Data) + "</td>" +
+        "</tr>" +
         '<tr>' + 
             '<td>Department:</td>' + 
             '<td>' + d.DEP + '</td>'+
@@ -46,8 +46,9 @@ $(document).ready(function() {
 	// DataTable
     var datatable = $('#example_table').DataTable( {
         processing: true,
-        //serverSide: true,
-        ajax: '/ajax/fetch_gsn_asset/',
+        serverSide: true,
+        //ajax: '/ajax/fetch_gsn_asset/',
+        ajax: '/ajax/ssp/',
         dom: 'Bfrtip',
         buttons: [
            'excel',

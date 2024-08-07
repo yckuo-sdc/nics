@@ -21,6 +21,7 @@ hackable/
 *.csv
 *.xls*
 *.log
+*.cache
 
 # ignore env file
 .env

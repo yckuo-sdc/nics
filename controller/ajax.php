@@ -5,18 +5,12 @@ if(!$userValidator->isLogin()){
     return;
 }	
 
-$userAction->logger('pageSwitch', $_SERVER['REQUEST_URI']); 
+#$userAction->logger('pageSwitch', $_SERVER['REQUEST_URI']); 
 
 $admin_only_pages = array("upload_contact");
 $subpage = strtolower($route->getParameter(2));
 $controller_array = scandir('controller/ajax');
 $controller_array = array_change_key_case($controller_array, CASE_LOWER);
-
-//if (in_array($subpage.'.php', $controller_array)) {
-//	  require 'controller/ajax/'.$subpage.'.php';
-//}else{
-//	  require 'controller/404.php';
-//}
 
 $route_code = '404';
 if (in_array($subpage . '.php', $controller_array)) {
