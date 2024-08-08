@@ -17,6 +17,3 @@ $db = Database::get();
 
 $userValidator = new UserValidator();
 $userAction = new UserAction();
-
-$elasticsearch_client = new ElasticsearchClient(); 
-$es_client = $elasticsearch_client->getClient();

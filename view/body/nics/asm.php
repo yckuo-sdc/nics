@@ -212,6 +212,7 @@
                                 <th>Hostname</th>
                                 <th>IP</th>
                                 <th>Port</th>
+                                <th>Product</th>
                                 <th>Scan Module</th>
                                 <th>Data Source</th>
                             </tr>
@@ -224,6 +225,7 @@
                                 <th>Hostname</th>
                                 <th>IP</th>
                                 <th>Port</th>
+                                <th>Product</th>
                                 <th>Scan Module</th>
                                 <th>Data Source</th>
                             </tr>
