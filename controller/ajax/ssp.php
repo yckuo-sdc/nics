@@ -36,15 +36,13 @@ $searchValues = [
 ];
 
 $searchFields = [
-    //0 => null,
-    2 => 'ACC.keyword',
-    3 => 'Hostname.keyword',
-    4 => 'IP.keyword',
-    5 => 'Port',
-    6 => 'Scan_Module.keyword',
-    7 => 'Data_Source.keyword',
+    'ACC.keyword',
+    'Hostname.keyword',
+    'IP.keyword',
+    'Scan_Module.keyword',
+    'Data_Source.keyword',
+    'Data.keyword',
 ];
-
 
 $sortField = $columns[$orderColumnIndex];
 
@@ -76,9 +74,10 @@ if (!empty($searchValue)) {
         'bool' => [
             'must' => [
                 [
-                    'multi_match' => [
-                        'query' => $searchValue,
-                        'fields' => ['ACC.keyword', 'Hostname.keyword', 'IP.keyword', 'Scan_Module.keyword', 'Data_Source.keyword']
+                    'query_string' => [
+                        'query' => "*" . $searchValue . "*",
+                        'fields' => $searchFields,   
+                        'analyze_wildcard' => true,
                     ]
                 ]
             ]
