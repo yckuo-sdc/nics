@@ -32,8 +32,6 @@
         <script src="/node_modules/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
         <script src="/node_modules/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
         <script src="/node_modules/datatables.net-buttons/js/buttons.html5.min.js"></script>
-:qa
-:xa
         <script src="/node_modules/jszip/dist/jszip.min.js"></script>
 
         <!-- leaflet -->
