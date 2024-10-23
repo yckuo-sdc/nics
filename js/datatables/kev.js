@@ -1,3 +1,32 @@
+/* Encoding HTML content */
+function encodeHTML(str) {
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+}
+
+/* Decoding HTML content */
+function decodeHtmlEntities(str) {
+  const txt = document.createElement('textarea');
+  txt.innerHTML = str;
+  return txt.value;
+}
+
+/* Creating Anchor content */
+function createAnchorLink ( jsonString ) {
+  const decodedString = decodeHtmlEntities(jsonString);
+  const jsonArray = JSON.parse(decodedString);
+
+  let anchors = ""
+  jsonArray.forEach((item) => {
+      const anchor = '<a class="ui basic grey label" target="_blank" href="' +
+          item.url + '">' + item.title + '</a>'
+      anchors += anchor
+  });
+
+  return anchors;
+}
+
 /* Formatting function for row details - modify as you need */
 function format ( d ) {
     // `d` is the original data object for the row
@@ -16,7 +45,7 @@ function format ( d ) {
         '</tr>' +
         '<tr>' + 
             '<td>PoC:</td>' + 
-            '<td>' + d.poc + '</td>'+
+            '<td>' + createAnchorLink(d.poc) + '</td>'+
         '</tr>' +
     '</table>';
 
@@ -99,8 +128,6 @@ $(document).ready(function() {
                     if (data === "") {
                         render_data = "-";
                     } else {
-                        //let decodedString = data.replace(/&quot;/g, '"');
-                        //let jsonObject = JSON.parse(decodedString);
                         render_data = "<div class='ui orange label'>Existed</div>";
                     }
                     return render_data;
