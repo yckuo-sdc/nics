@@ -12,10 +12,25 @@ function decodeHtmlEntities(str) {
   return txt.value;
 }
 
+function isJSONAndObject(string) {
+    try {
+        const parsed = JSON.parse(string);
+        return typeof parsed === "object" && parsed !== null; // Ensure it's an object or array
+    } catch (e) {
+        return false;
+    }
+}
+
 /* Creating Anchor content */
 function createAnchorLink ( jsonString ) {
   const decodedString = decodeHtmlEntities(jsonString);
-  const jsonArray = JSON.parse(decodedString);
+  let jsonArray; 
+
+  if (isJSONAndObject(decodedString)) {
+      jsonArray = JSON.parse(decodedString);
+  } else {
+      jsonArray = [];
+  }
 
   let anchors = ""
   jsonArray.forEach((item) => {
@@ -97,7 +112,7 @@ $(document).ready(function() {
             },
             { data: 'vendor_project' },
             { data: 'product' },
-            { data: 'cvss_v3_score' },
+            { data: 'cvss_score' },
             { data: 'cwe_id',
 				render: function(data, type, row, meta) {
                     if (data.startsWith('CWE-')) {

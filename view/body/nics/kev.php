@@ -14,7 +14,7 @@
                                 <th>CVE ID</th>
                                 <th>Vendor</th>
                                 <th>Product</th>
-                                <th>CVSSv3</th>
+                                <th>CVSS</th>
                                 <th>CWE ID</th>
                                 <th>Ransomware</th>
                                 <th>PoC</th>
@@ -28,7 +28,7 @@
                                 <th>CVE ID</th>
                                 <th>Vendor</th>
                                 <th>Product</th>
-                                <th>CVSSv3</th>
+                                <th>CVSS</th>
                                 <th>CWE ID</th>
                                 <th>Ransomware</th>
                                 <th>PoC</th>
