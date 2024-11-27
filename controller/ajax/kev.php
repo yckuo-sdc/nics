@@ -13,17 +13,17 @@ $sql =
             CONCAT(
                 '[',
                     GROUP_CONCAT(
-                        CONCAT('{\"title\":\"', cisa_kev_pocs.title, '\",'),
-                        CONCAT('\"url\":\"', cisa_kev_pocs.url, '\"}')
+                        CONCAT('{\"title\":\"', cisa_kev_exploits.name, '\",'),
+                        CONCAT('\"url\":\"', cisa_kev_exploits.exploit_url, '\"}')
                     ),
                 ']'
             ) AS pocs
         FROM 
-            cisa_kev_pocs
+            cisa_kev_exploits
         WHERE 
-            cisa_kev_pocs.cve_id = cisa_kevs.cve_id
+            cisa_kev_exploits.cve_id = cisa_kevs.cve_id
         GROUP BY 
-            cisa_kev_pocs.cve_id
+            cisa_kev_exploits.cve_id
     ) AS poc
 FROM 
     cisa_kevs

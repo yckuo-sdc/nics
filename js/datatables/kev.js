@@ -1,8 +1,8 @@
 /* Encoding HTML content */
 function encodeHTML(str) {
-        var div = document.createElement('div');
-        div.appendChild(document.createTextNode(str));
-        return div.innerHTML;
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
 }
 
 /* Decoding HTML content */
